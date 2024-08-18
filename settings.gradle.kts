@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoinCompose"
 include(":app")
- 
+include(":data")
+include(":domain")
+include(":util")
+include(":feature:coin")

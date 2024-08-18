@@ -1,4 +1,4 @@
-package com.solodilov.coincompose.ui.theme
+package com.solodilov.util.theme
 
 import androidx.compose.ui.graphics.Color
 
