@@ -1,6 +1,8 @@
 package com.solodilov.coincompose.app
 
 import android.app.Application
+import com.solodilov.coin.di.coinModule
+import com.solodilov.data.di.dataModule
 import com.solodilov.domain.di.domainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -16,7 +18,9 @@ class App : Application() {
             androidContext(this@App)
             modules(
                 listOf(
+                    dataModule,
                     domainModule,
+                    coinModule,
                 )
             )
         }

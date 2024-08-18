@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoinCompose</string>
+    <string name="coin_list">Coin list</string>
+    <string name="error_message">There was some error :(\nTry again?</string>
+    <string name="try_it">Try it</string>
+    <string name="description">Description</string>
+    <string name="categories">Categories</string>
+    <string name="error_loading">There was an error loading</string>
+</resources>

@@ -59,6 +59,8 @@ dependencies {
 
     // Koin
     implementation(libs.koin.androidx.compose)
+    //Navigation
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoinCompose</string>
+    <string name="coin_list">Список криптоволют</string>
+    <string name="error_message">Произошла какая-то ошибка :(\nПопробуем снова?</string>
+    <string name="try_it">Попробовать</string>
+    <string name="description">Описание</string>
+    <string name="categories">Категории</string>
+    <string name="error_loading">Произошла ошибка при загрузке</string>
+</resources>
