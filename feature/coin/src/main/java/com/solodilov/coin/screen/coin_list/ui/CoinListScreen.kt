@@ -8,13 +8,15 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import com.solodilov.coin.screen.coin_list.business.CoinListScreenState
 import com.solodilov.coin.screen.coin_list.business.CoinListViewModel
+import com.solodilov.coin.screen.common.ErrorScreen
+import com.solodilov.coin.screen.common.LoadingScreen
 import com.solodilov.domain.entity.Currency
 import com.solodilov.util.navigation.Destinations
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
 fun CoinListScreen(
-    navigateWithArgument: (String, String) -> Unit,
+    navigateWithArgument: (String, String, String) -> Unit,
     viewModel: CoinListViewModel = koinViewModel(),
 ) {
 
@@ -38,17 +40,15 @@ fun CoinListScreen(
                         CoinItem(
                             coin = coin,
                             onClick = {
-                                navigateWithArgument(Destinations.CoinDetailsScreen, coin.id)
+                                navigateWithArgument(Destinations.CoinDetailsScreen, coin.id, coin.name)
                             }
                         )
                     }
                 }
             }
 
-            CoinListScreenState.Error -> {
-            }
-
-            CoinListScreenState.Loading -> {}
+            CoinListScreenState.Error -> { ErrorScreen(onClick = { viewModel.loadCoinList() }) }
+            CoinListScreenState.Loading -> { LoadingScreen() }
         }
 
     }

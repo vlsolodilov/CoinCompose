@@ -10,8 +10,8 @@ data class Actions(val navController: NavHostController) {
         }
     }
 
-    val navigateWithArgument: (String, String) -> Unit = { destination, value ->
-        val route = "$destination/$value"
+    val navigateWithArgument: (String, String, String) -> Unit = { destination, value1, value2  ->
+        val route = "$destination/$value1/$value2"
         if (!navController.popBackStack(route = route, inclusive = false)) {
             navController.navigate(route)
         }

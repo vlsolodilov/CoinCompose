@@ -14,7 +14,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.solodilov.coin.screen.coin_detail.CoinDetailsScreen
+import com.solodilov.coin.screen.coin_detail.ui.CoinDetailsScreen
 import com.solodilov.coin.screen.coin_list.ui.CoinListScreen
 import com.solodilov.util.navigation.Arguments
 import com.solodilov.util.navigation.Routes
@@ -60,13 +60,15 @@ fun NavGraph(
         }
         composable(
             route = Routes.CoinDetails,
-            arguments = listOf(navArgument(Arguments.CoinId) {
-                type = NavType.StringType
-            })
+            arguments = listOf(
+                navArgument(Arguments.CoinId) { type = NavType.StringType },
+                navArgument(Arguments.CoinName) { type = NavType.StringType },
+            )
         ) { backStackEntry ->
             val arguments = requireNotNull(backStackEntry.arguments)
             CoinDetailsScreen(
                 coinId = arguments.getString(Arguments.CoinId, ""),
+                coinName = arguments.getString(Arguments.CoinName, ""),
                 navigateTo = actions.navigateTo,
             )
         }

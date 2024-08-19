@@ -1,4 +1,4 @@
-package com.solodilov.coin.screen.coin_detail
+package com.solodilov.coin.screen.coin_detail.business
 
 import com.solodilov.domain.entity.CoinDetail
 

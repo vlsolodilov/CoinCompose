@@ -26,7 +26,7 @@ fun CoinListToolbar(
     onSelected: (Currency) -> Unit,
 ) {
     Surface(
-        color = Color.White,
+        color = MaterialTheme.colorScheme.background,
         shadowElevation = 8.dp,
     ) {
         Column(
